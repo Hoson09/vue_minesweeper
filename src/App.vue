@@ -92,7 +92,7 @@ export default {
   created() {
     this.initCellData();
     document.oncontextmenu = () => {
-      // return false; //禁止鼠标右键弹出菜单的默认操作。
+      return false; //禁止鼠标右键弹出菜单的默认操作。
     };
     EventBus.$on("click-cell", () => {
       this.isReset && EventBus.$emit("start-timer");
